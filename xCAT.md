@@ -63,7 +63,7 @@ chdef -t site domain=andromeda
 
 Download the OS imagem 
 ```bash
-wget https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.6-x86_64-minimal.iso
+wget https://dl.rockylinux.org/vault/rocky/9.6/isos/x86_64/Rocky-9.6-x86_64-minimal.iso
 copycds Rocky-9.6-x86_64-minimal.iso
 ```
 
