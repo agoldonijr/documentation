@@ -145,3 +145,23 @@ Generate image:
 genimage rocky9.6-x86_64-netboot-compute
 packimage rocky9.6-x86_64-netboot-compute
 ```
+
+
+### Adding nodes
+```bash
+mkdef -t node cn1 --template x86_64-template ip=192.168.0.3 mac=42:3d:0a:05:27:0c bmc=10.4.40.254 bmcusername=USERID bmcpassword=PASSW0RD
+makehosts cn1
+makedns -n
+rpower cn1 on
+rpower cn1 state
+```
+
+#### Start the Diskful OS Deployment
+```bash
+rinstall cn1 osimage=rocky9.6-x86_64-install-compute
+makegocons cn1
+rcons cn1
+```
+
+
+
